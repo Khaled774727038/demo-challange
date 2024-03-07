@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <a href="/">Home</a>
+
+    <div> <h3><%= article.title %></h3>
+        <p><%= article.text %> </p>
+        <p><%= article.created_at %></p></div>
+        <form action="/delete-article/ <%= article._id %>" method="post">
+            <button>Delete</button>
+            <a href="/update-article/ <%= article._id %>">Edit</a>
+        </form>
+        <a href="/delete-article/ <%= article._id %>"> del</a>
+</body>
+</html>

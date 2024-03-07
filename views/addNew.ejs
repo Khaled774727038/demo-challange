@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new</title>
+    <link rel="stylesheet" href="../public/addNewstyle.css">
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="/add-new" method="post">
+    <input type="text" name="title"  placeholder="write a title">
+    <% if (err){%>
+        <p> <%= err["title"] %></p>
+
+  <%  }
+    %>
+    <textarea name="text" placeholder="write a body of your article"></textarea>
+
+    <% if (err){%>
+        <p> <%= err["text"] %></p>
+
+  <%  }
+    %>
+    <button>submit</button>
+     
+</form> 
+</body>
+</html>
